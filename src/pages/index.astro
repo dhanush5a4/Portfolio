@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Education from '../components/Education';
+import Experience from '../components/Experience';
+import Certifications from '../components/Certifications';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Pamarthi Dhanush | Power Platform Developer">
+  <main class="w-full relative min-h-screen">
+    <Hero client:load />
+    <div class="relative z-10 bg-background">
+      <About client:visible />
+      <Education client:visible />
+      <Experience client:visible />
+      <Certifications client:visible />
+      <Contact client:visible />
+      <Footer />
+    </div>
+  </main>
+</Layout>
